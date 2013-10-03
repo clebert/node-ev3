@@ -6,6 +6,14 @@ Node.js for Lego Mindstorms EV3.
 
     $ npm install ev3
 
+## Running tests
+
+    $ make test
+
+## Linting sources
+
+    $ make lint
+
 ## License
 
 The MIT License (MIT)
