@@ -1,0 +1,35 @@
+{
+    "name": "ev3",
+    "version": "0.1.0",
+    "description": "Node.js for Lego Mindstorms EV3.",
+    "keywords": ["ev3", "lego", "mindstorms"],
+    "bugs": {
+        "url": "https://github.com/clebert/ev3/issues"
+    },
+    "author": "Clemens Akens (http://clebert.com/)",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://raw.github.com/clebert/ev3/master/LICENSE.txt"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/clebert/ev3.git"
+    },
+    "devDependencies": {
+        "jshint": "2.1.x",
+        "mocha": "1.13.x"
+    },
+    "scripts": {
+        "test": "make test"
+    },
+    "engines": {
+        "node": ">= 0.6.0"
+    },
+    "nodemake": {
+        "publish": {
+            "username": "clebert"
+        }
+    }
+}
