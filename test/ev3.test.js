@@ -4,7 +4,7 @@ var ev3 = require('../index'),
     motor = ev3.motor,
     port = motor.portA | motor.portB;
 
-motor.setSpeed(10, port);
+motor.setSpeed(port, 10);
 
 motor.start(port);
 
