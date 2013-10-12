@@ -1,6 +1,6 @@
 'use strict';
 
-var ev3 = require('ev3'),
+var ev3 = require('../index'),
     motor = ev3.motor,
     port = motor.portA | motor.portB;
 
