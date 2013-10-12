@@ -1,0 +1,1 @@
+cmd_Release/obj.target/mmap.node := arm-unknown-linux-gnueabi-g++ -shared -pthread -rdynamic  -Wl,-soname=mmap.node -o Release/obj.target/mmap.node -Wl,--start-group Release/obj.target/mmap/mmap.o -Wl,--end-group 
