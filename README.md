@@ -1,10 +1,14 @@
-# ev3
+# ev3 [![Build Status](https://travis-ci.org/clebert/ev3.png?branch=master)](https://travis-ci.org/clebert/ev3)
 
 Node.js for Lego Mindstorms EV3.
 
 ## Installation
 
     $ npm install ev3
+
+## Usage
+
+    var ev3 = require('ev3');
 
 ## Running tests
 
