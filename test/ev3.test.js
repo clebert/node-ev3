@@ -2,26 +2,21 @@
 
 var ev3 = require('../index'),
     motor = ev3.motor,
-    port = motor.portA | motor.portB;
+    port = motor.portA,
+    intervalID;
 
-motor.setSpeed(port, 10);
-
+motor.resetTachoCount(port);
+motor.setSpeed(port, 80);
 motor.start(port);
 
-setTimeout(function () {
-    console.log('Speed:');
+intervalID = setInterval(function () {
     console.log(motor.getSpeed());
-    console.log('TachoCount:');
+}, 100);
+
+setTimeout(function () {
+    clearInterval(intervalID);
+
     console.log(motor.getTachoCount());
 
-    motor.resetTachoCount(port);
-
-    setTimeout(function () {
-        console.log('Speed:');
-        console.log(motor.getSpeed());
-        console.log('TachoCount:');
-        console.log(motor.getTachoCount());
-
-        motor.coast(port);
-    }, 4000);
-}, 1000);
+    motor.brake(port);
+}, 60000);
