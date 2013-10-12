@@ -1,5 +1,5 @@
 *.sublime-project
 *.sublime-workspace
 .DS_Store
-node_modules
 npm-debug.log
+node_modules/
