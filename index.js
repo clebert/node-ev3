@@ -1,3 +1,9 @@
 'use strict';
 
-module.exports = require('./lib/ev3');
+var motor = require('./lib/motor');
+
+Object.defineProperties(exports, {
+    motor: {
+        value: motor
+    }
+});
