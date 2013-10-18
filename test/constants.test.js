@@ -53,34 +53,34 @@ suite('constants', function () {
         });
     });
 
-    suite('.PORT', function () {
-        var PORT = constants.PORT;
+    suite('.MOTOR_PORT', function () {
+        var MOTOR_PORT = constants.MOTOR_PORT;
 
         suite('.A', function () {
 
             test('should be 1', function () {
-                assert.strictEqual(PORT.A, 1);
+                assert.strictEqual(MOTOR_PORT.A, 1);
             });
         });
 
         suite('.B', function () {
 
             test('should be 2', function () {
-                assert.strictEqual(PORT.B, 2);
+                assert.strictEqual(MOTOR_PORT.B, 2);
             });
         });
 
         suite('.C', function () {
 
             test('should be 4', function () {
-                assert.strictEqual(PORT.C, 4);
+                assert.strictEqual(MOTOR_PORT.C, 4);
             });
         });
 
         suite('.D', function () {
 
             test('should be 8', function () {
-                assert.strictEqual(PORT.D, 8);
+                assert.strictEqual(MOTOR_PORT.D, 8);
             });
         });
     });
