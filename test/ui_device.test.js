@@ -9,7 +9,7 @@ var assert = require('assert'),
 
 suite('ui_device', function () {
 
-    suite('.isButtonPressed(button:number) => boolean', function () {
+    suite('.getButtonState(button:number) => boolean', function () {
         var buffer = new Buffer(6),
             uiDevice;
 
@@ -39,7 +39,7 @@ suite('ui_device', function () {
             description = 'should return false when passing BUTTON.' + name;
 
             test(description, function () {
-                assert.strictEqual(uiDevice.isButtonPressed(button), false);
+                assert.strictEqual(uiDevice.getButtonState(button), false);
             });
 
             description = 'should return true when passing BUTTON.' + name;
@@ -47,7 +47,7 @@ suite('ui_device', function () {
             test(description, function () {
                 buffer[button] = 1;
 
-                assert.strictEqual(uiDevice.isButtonPressed(button), true);
+                assert.strictEqual(uiDevice.getButtonState(button), true);
             });
         });
     });
