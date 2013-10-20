@@ -52,5 +52,40 @@ suite('motor_device', function () {
         });
     });
 
-    // suite('.getTachoCount(motorPort:number) => number', function () {});
+    suite('.getTachoCount(motorPort:number) => number', function () {
+        var offsetByKey = {};
+
+        offsetByKey.A = 8;
+        offsetByKey.B = offsetByKey.A + 12;
+        offsetByKey.C = offsetByKey.B + 12;
+        offsetByKey.D = offsetByKey.C + 12;
+
+        Object.keys(offsetByKey).forEach(function (key) {
+            var motorPort = constants.MOTOR_PORT[key];
+
+            [
+                new Buffer([
+                    0, 0, 0, 0
+                ])
+            ].forEach(function (tachoCountBuffer) {
+                var tachoCount = tachoCountBuffer.readInt32LE(0),
+                    description;
+
+                description = 'should return ' + tachoCount +
+                    ' when passing MOTOR_PORT.' + key;
+
+                test(description, function () {
+                    var buffer = testUtil.createBuffer(bufferSize),
+                        motorDevice = getMotorDevice(buffer);
+
+                    tachoCountBuffer.copy(buffer, offsetByKey[key]);
+
+                    assert.strictEqual(
+                        motorDevice.getTachoCount(motorPort),
+                        tachoCount
+                    );
+                });
+            });
+        });
+    });
 });
