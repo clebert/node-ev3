@@ -24,11 +24,11 @@ suite('ui_device', function () {
     suite('.getButtonState(button:number) => boolean', function () {
         [
             'UP', 'ENTER', 'DOWN', 'RIGHT', 'LEFT', 'ESCAPE'
-        ].forEach(function (name) {
-            var button = constants.BUTTON[name],
+        ].forEach(function (key) {
+            var button = constants.BUTTON[key],
                 description;
 
-            description = 'should return false when passing BUTTON.' + name;
+            description = 'should return false when passing BUTTON.' + key;
 
             test(description, function () {
                 var buffer = testUtil.createBuffer(bufferSize),
@@ -37,7 +37,7 @@ suite('ui_device', function () {
                 assert.strictEqual(uiDevice.getButtonState(button), false);
             });
 
-            description = 'should return true when passing BUTTON.' + name;
+            description = 'should return true when passing BUTTON.' + key;
 
             test(description, function () {
                 var buffer = testUtil.createBuffer(bufferSize),
