@@ -1,4 +1,4 @@
-/* global setup, suite, test */
+/* global suite, test */
 
 'use strict';
 
@@ -8,28 +8,20 @@ var assert = require('assert'),
     testUtil = require('./test_util');
 
 suite('ui_device', function () {
+    var bufferSize = 6;
 
-    suite('.getButtonState(button:number) => boolean', function () {
-        var buffer = new Buffer(6),
-            uiDevice;
-
-        setup(function () {
-            var index;
-
-            for (index = 0; index < buffer.length; index += 1) {
-                buffer[index] = 0;
-            }
-        });
-
-        device.map = function (name, length) {
+    function getUIDevice(buffer) {
+        device.map = function map(name, length) {
             assert.strictEqual(name, '/dev/lms_ui');
-            assert.strictEqual(length, 6);
+            assert.strictEqual(length, bufferSize);
 
             return buffer;
         };
 
-        uiDevice = testUtil.reloadModule('../lib/device/ui_device');
+        return testUtil.reloadModule('../lib/device/ui_device');
+    }
 
+    suite('.getButtonState(button:number) => boolean', function () {
         [
             'UP', 'ENTER', 'DOWN', 'RIGHT', 'LEFT', 'ESCAPE'
         ].forEach(function (name) {
@@ -39,12 +31,18 @@ suite('ui_device', function () {
             description = 'should return false when passing BUTTON.' + name;
 
             test(description, function () {
+                var buffer = testUtil.createBuffer(bufferSize),
+                    uiDevice = getUIDevice(buffer);
+
                 assert.strictEqual(uiDevice.getButtonState(button), false);
             });
 
             description = 'should return true when passing BUTTON.' + name;
 
             test(description, function () {
+                var buffer = testUtil.createBuffer(bufferSize),
+                    uiDevice = getUIDevice(buffer);
+
                 buffer[button] = 1;
 
                 assert.strictEqual(uiDevice.getButtonState(button), true);
