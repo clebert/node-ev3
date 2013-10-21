@@ -21,41 +21,34 @@ suite('analog_device', function () {
     }
 
     suite('.getVoltage() => number', function () {
+        [
+            {
+                buffer: new Buffer([
+                    124, 0, 252, 11
+                ]),
+                voltage: 7.548945498945499
+            },
+            {
+                buffer: new Buffer([
+                    36, 1, 220, 13
+                ]),
+                voltage: 8.73043068043068
+            },
+            {
+                buffer: new Buffer([
+                    112, 0, 104, 14
+                ]),
+                voltage: 9.062321012321013
+            }
+        ].forEach(function (data) {
+            test('should return ' + data.voltage, function () {
+                var buffer = testUtil.createBuffer(bufferSize),
+                    analogDevice = getAnalogDevice(buffer);
 
-        test('should return 7.548945498945499', function () {
-            var buffer = testUtil.createBuffer(bufferSize),
-                analogDevice = getAnalogDevice(buffer);
+                data.buffer.copy(buffer, 28);
 
-            buffer[28] = 124;
-            buffer[29] = 0;
-            buffer[30] = 252;
-            buffer[31] = 11;
-
-            assert.strictEqual(analogDevice.getVoltage(), 7.548945498945499);
-        });
-
-        test('should return 8.73043068043068', function () {
-            var buffer = testUtil.createBuffer(bufferSize),
-                analogDevice = getAnalogDevice(buffer);
-
-            buffer[28] = 36;
-            buffer[29] = 1;
-            buffer[30] = 220;
-            buffer[31] = 13;
-
-            assert.strictEqual(analogDevice.getVoltage(), 8.73043068043068);
-        });
-
-        test('should return 9.062321012321013', function () {
-            var buffer = testUtil.createBuffer(bufferSize),
-                analogDevice = getAnalogDevice(buffer);
-
-            buffer[28] = 112;
-            buffer[29] = 0;
-            buffer[30] = 104;
-            buffer[31] = 14;
-
-            assert.strictEqual(analogDevice.getVoltage(), 9.062321012321013);
+                assert.strictEqual(analogDevice.getVoltage(), data.voltage);
+            });
         });
     });
 });
