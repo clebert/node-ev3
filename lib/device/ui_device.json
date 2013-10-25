@@ -1,0 +1,26 @@
+{
+    "upButton": {
+        "offset": 0,
+        "type": "Int8"
+    },
+    "enterButton": {
+        "offset": 1,
+        "type": "Int8"
+    },
+    "downButton": {
+        "offset": 2,
+        "type": "Int8"
+    },
+    "rightButton": {
+        "offset": 3,
+        "type": "Int8"
+    },
+    "leftButton": {
+        "offset": 4,
+        "type": "Int8"
+    },
+    "escapeButton": {
+        "offset": 5,
+        "type": "Int8"
+    }
+}
