@@ -1,0 +1,34 @@
+{
+    "speedA": {
+        "offset": 4,
+        "type": "Int8"
+    },
+    "speedB": {
+        "offset": 16,
+        "type": "Int8"
+    },
+    "speedC": {
+        "offset": 28,
+        "type": "Int8"
+    },
+    "speedD": {
+        "offset": 40,
+        "type": "Int8"
+    },
+    "tachoCountA": {
+        "offset": 8,
+        "type": "Int32"
+    },
+    "tachoCountB": {
+        "offset": 20,
+        "type": "Int32"
+    },
+    "tachoCountC": {
+        "offset": 32,
+        "type": "Int32"
+    },
+    "tachoCountD": {
+        "offset": 44,
+        "type": "Int32"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "batteryTemp": {
+        "offset": 24,
+        "type": "Int16"
+    },
+    "motorCurrent": {
+        "offset": 26,
+        "type": "Int16"
+    },
+    "batteryCurrent": {
+        "offset": 28,
+        "type": "Int16"
+    },
+    "cell123456": {
+        "offset": 30,
+        "type": "Int16"
+    }
+}
