@@ -1,25 +1,25 @@
 {
-    "upButton": {
+    "upButtonState": {
         "offset": 0,
         "type": "Int8"
     },
-    "enterButton": {
+    "enterButtonState": {
         "offset": 1,
         "type": "Int8"
     },
-    "downButton": {
+    "downButtonState": {
         "offset": 2,
         "type": "Int8"
     },
-    "rightButton": {
+    "rightButtonState": {
         "offset": 3,
         "type": "Int8"
     },
-    "leftButton": {
+    "leftButtonState": {
         "offset": 4,
         "type": "Int8"
     },
-    "escapeButton": {
+    "escapeButtonState": {
         "offset": 5,
         "type": "Int8"
     }
