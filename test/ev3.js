@@ -25,12 +25,12 @@ ev3.button.down.on('press', function () {
 
 ev3.button.right.on('press', function () {
     motor.resetTachoCount();
-    motor.setSpeed(50);
+    motor.setSpeed(360);
     motor.start();
 });
 
 ev3.button.left.on('press', function () {
-    motor.stopAndBrake();
+    motor.stop();
 });
 
 ev3.button.escape.on('press', function () {
