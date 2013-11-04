@@ -1,6 +1,6 @@
 {
     "name": "ev3",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Node.js for Lego Mindstorms EV3.",
     "keywords": [
         "ev3", "lego", "mindstorms", "lms"
@@ -10,8 +10,8 @@
         "url": "https://github.com/clebert/ev3/issues"
     },
     "devDependencies": {
-        "jshint": "2.1.x",
-        "mocha": "1.13.x"
+        "jshint": "2.3.x",
+        "mocha": "1.14.x"
     },
     "engines": {
         "node": ">= 0.10.0"
