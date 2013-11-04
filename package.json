@@ -1,6 +1,6 @@
 {
     "name": "ev3",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Node.js for Lego Mindstorms EV3.",
     "keywords": [
         "ev3", "lego", "mindstorms", "lms"
@@ -8,9 +8,6 @@
     "author": "Clemens Akens (http://clebert.com/)",
     "bugs": {
         "url": "https://github.com/clebert/ev3/issues"
-    },
-    "dependencies": {
-        "typeutil": "0.1.x"
     },
     "devDependencies": {
         "jshint": "2.1.x",
