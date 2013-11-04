@@ -11,7 +11,7 @@
     },
     "devDependencies": {
         "jshint": "2.3.x",
-        "mocha": "1.14.x"
+        "mocha": "1.13.x"
     },
     "engines": {
         "node": ">= 0.10.0"
