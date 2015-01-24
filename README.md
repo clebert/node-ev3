@@ -1,6 +1,8 @@
+**THIS PROJECT IS NO LONGER MAINTAINED by clebert.**
+
 # ev3 [![Build Status](https://travis-ci.org/clebert/ev3.png?branch=master)](https://travis-ci.org/clebert/ev3)
 
-Node.js on the Lego Mindstorms EV3 Intelligent Brick.
+> [Deprecated] Node.js on the Lego Mindstorms EV3 Intelligent Brick.
 
 ## Installation
 
