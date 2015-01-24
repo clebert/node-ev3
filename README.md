@@ -1,5 +1,7 @@
 **THIS PROJECT IS NO LONGER MAINTAINED by clebert.**
 
+**Please see my new project [r-pi-brick](https://github.com/clebert/r-pi-brick).**
+
 # ev3 [![Build Status](https://travis-ci.org/clebert/ev3.png?branch=master)](https://travis-ci.org/clebert/ev3)
 
 > [Deprecated] Node.js on the Lego Mindstorms EV3 Intelligent Brick.
